@@ -1,0 +1,49 @@
+{% extends 'back/base.html' %}
+
+{% block content %}
+
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-18">
+                <div class="card strpied-tabled-with-hover">
+                    <div class="card-header ">
+                        <a class="btn btn-sm btn-danger" href="{% url 'tambah_artikel' %}"><i class="bi bi-clipboard-plus"></i>&nbsp; artikel</a>
+                    </div>
+                    <div class="card-body table-full-width table-responsive">
+                        <table class="table table-hover table-striped">
+                            <thead>
+                                <th>No</th>
+                                <th>Nama</th>
+                                <th>Judul</th>
+                                <th>Kategory</th>
+                                <th>Date</th>
+                                <th>Action</th>
+                            </thead>
+                            <tbody>
+                                {% for i in artikel %}
+
+                                <tr>
+                                    <td>{{forloop.counter}}</td>
+                                    <td>{{i.nama}}</td>
+                                    <td>{{i.judul}}</td>
+                                    <td>{{i.kategory}}</td>
+                                    <td>{{i.date}}</td>
+                                    <td>
+                                    <a class="btn btn-sm btn-info" href="{% url 'lihat_artikel' i.id %}"><i class="bi bi-eye"></i></a> &nbsp;
+                                    <a class="btn btn-sm btn-warning" href="{% url 'edit_artikel' i.id %}"><i class="bi bi-pen"></i></a>&nbsp;
+                                    <a onclick="return confirm('yakin ingin menghapus?')" class="btn btn-sm btn-danger" href="{% url 'delete_artikel' i.id %}"><i class="bi bi-trash"></i></a>
+                                    </td>
+                                </tr>
+
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

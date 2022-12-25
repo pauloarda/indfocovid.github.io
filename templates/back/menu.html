@@ -1,0 +1,33 @@
+
+{% load static %}
+
+<div class="sidebar-wrapper">
+    <div class="logo">
+        <a href="{% url 'index' %}" class="simple-text">
+            INDFO COVID
+        </a>
+    </div>
+    <ul class="nav">
+        <li>
+            <a class="nav-link" href="./user.html">
+                <i class="nc-icon nc-circle-09"></i>
+                <p>
+                    {{user}}
+                </p>
+            </a>
+        </li>
+        <li>
+            <a class="nav-link" href="{% url 'tabel_artikel' %}">
+                <i class="nc-icon nc-paper-2"></i>
+                <p>Tabel Artikel</p>
+            </a>
+        </li>
+        <li>
+            <a class="nav-link" href="{% url 'tabel_users' %}">
+                <i class="nc-icon nc-notes"></i>
+                <p>Tabel Users</p>
+            </a>
+        </li>
+        
+    </ul>
+</div>

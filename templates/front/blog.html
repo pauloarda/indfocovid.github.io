@@ -1,0 +1,63 @@
+{% extends 'front/base.html' %}
+
+{% load static %}
+
+{% block content %}
+<div class="hero-v1">
+    <div class="container">
+      <div class="row align-items-center justify-content-center">
+        <div class="col-lg-6 text-center mx-auto">
+          <span class="d-block subheading">Updates</span>
+          <h1 class="heading mb-3">Blog Posts</h1>
+          <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel a, nulla incidunt eaque sit praesentium porro consectetur optio!</p>
+        </div>
+          
+      </div>
+    </div>
+  </div>
+
+
+  <!-- MAIN -->
+
+
+
+
+  <div class="site-section">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-lg-7 mx-auto text-center">
+          <h2 class="mb-4 section-heading">Artikel Terbaru &amp; Articles</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex officia quas, modi sit eligendi numquam!</p>
+        </div>
+      </div>
+
+      {% for i in artikel %}
+      <div class="article">
+        <div class="row">
+          <div class="col-sm-6 col-md-6 col-lg-7 mb-5 ml-auto mr-auto">
+            <div class="post-entry">
+              <h3><a>{{i.judul}}</a></h3>
+              <div>
+              <h12><a>{{i.body|safe|truncatechars:400 }}</a></h12>
+              </div>
+            </div>
+            <center><a class="btn btn-info btn-round btn-sm" href="{% url 'detail_artikel' i.id %}">Baca Selengkapnya></a></center>
+          </div>
+        </div>  
+      </div>
+      {% endfor %}
+
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <div class="custom-pagination">
+            <a href="#">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}

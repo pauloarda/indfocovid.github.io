@@ -1,0 +1,51 @@
+{% extends 'back/base.html' %}
+
+{% block content %}
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-body table-full-width table-responsive">
+                      <form class="form-horizontal" method="POST">
+                        {% csrf_token %}
+                        <div class="card-header">
+                          <h4 class="card-title">
+                            <center>{{title}}</center>
+                          </h4>
+                        </div>
+  
+                      <div class="card-content">
+                        <div class="form-group">
+                          <label class="col-md-3 control-label"><b style="color:black;">username</b></label>
+                          <div class="col-md-15">
+                            <p>{{user.username}}</p>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="col-md-3 control-label"><b style="color:black;">Email</b></label>
+                          <div class="col-md-15">
+                           <p>{{user.email}}</p>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="col-md-3 control-label"><b style="color:black;">Nama Awal</b></label>
+                          <div class="col-md-15">
+                            <p>{{user.first_name}}</p>
+                          </div>
+                        </div>                      
+                        <div class="form-group">
+                          <label class="col-md-3 control-label"><b style="color:black;">Nama Akhir</b></label>
+                          <div class="col-md-15">
+                              <p>{{user.last_name}}</p>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  </div>
+{% endblock content %}

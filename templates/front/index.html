@@ -1,0 +1,392 @@
+{% extends 'front/base.html' %}
+
+{% load static %}
+
+{% block content %}
+<div class="hero-v1">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 mr-auto text-center text-lg-left">
+            <span class="d-block subheading">Covid-19 Awareness</span>
+            <h1 class="heading mb-3">Jaga Kesehatan &amp; Tetap Memakai Masker </h1>
+            <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel a, nulla incidunt eaque sit praesentium porro consectetur optio!</p>
+            <p class="mb-4"><a href="#" class="btn btn-primary">Cara Mencegah</a></p>
+
+
+
+          </div>
+          <div class="col-lg-6">
+            <figure class="illustration">
+              <img src="{% static 'front/images/illustration.png' %}" alt="Image" class="img-fluid">
+            </figure>
+          </div>
+          <div class="col-lg-6"></div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- MAIN -->
+    <div class="site-section stats">
+      <div class="container">
+        <div class="row mb-3">
+          <div class="col-lg-7 text-center mx-auto">
+            <h2 class="section-heading">Statistik Virus Corona Di Indonesia</h2>
+            <p>Update Terakhir : {{Tanggal}}</p>
+          </div>
+        </div>
+        <div class="row"> 
+          <div class="col-lg-4">
+            <div class="data">
+              <span class="icon text-primary">
+                <span class="flaticon-virus"></span>
+              </span>
+              <strong class="d-block number">{{Total.jumlah_positif}}</strong>
+              <span class="label">Positif</span>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="data">
+              <span class="icon text-primary">
+                <span class="flaticon-virus"></span>
+              </span>
+              <strong class="d-block number">{{Total.jumlah_sembuh}}</strong>
+              <span class="label">Sembuh</span>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="data">
+              <span class="icon text-primary">
+                <span class="flaticon-virus"></span>
+              </span>
+              <strong class="d-block number">{{Total.jumlah_meninggal}}</strong>
+              <span class="label">Meniggal Dunia</span>
+            </div>
+          </div>
+        </div>
+        &NonBreakingSpace;
+        <center><a class="btn btn-primary btn-round btn-sm" href="{% url 'statistik' %}">Lihat Selengkapnya</a></center>
+      </div>
+    </div>
+
+
+    <div class="site-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 mb-4 mb-lg-0">
+            <figure class="img-play-vid">
+              <img src="{% static 'front/images/hero_1.jpg' %}" alt="Image" class="img-fluid">
+            </figure>
+          </div>
+          <div class="col-lg-5 ml-auto">
+            <h2 class="mb-4 section-heading">Apa itu Virus Corona?</h2>
+            <p>Virus Corona atau severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) adalah virus yang menyerang sistem pernapasan. 
+              Penyakit akibat infeksi virus ini disebut COVID-19. Virus Corona bisa menyebabkan gangguan ringan pada sistem pernapasan,
+              infeksi paru-paru yang berat, hingga kematian.</p>
+              &NonBreakingSpace;
+            <p><a href="#" class="btn btn-primary">Learn more</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container pb-5">
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="feature-v1 d-flex align-items-center">
+            <div class="icon-wrap mr-3">
+              <span class="flaticon-protection"></span>
+            </div>
+            <div>
+              <h3>Perlindungan</h3>
+              <span class="d-block">Lorem ipsum dolor sit.</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="feature-v1 d-flex align-items-center">
+            <div class="icon-wrap mr-3">
+              <span class="flaticon-patient"></span>
+            </div>
+            <div>
+              <h3>Pencegahan</h3>
+              <span class="d-block">Lorem ipsum dolor sit.</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="feature-v1 d-flex align-items-center">
+            <div class="icon-wrap mr-3">
+              <span class="flaticon-hand-sanitizer"></span>
+            </div>
+            <div>
+              <h3>Perawatan</h3>
+              <span class="d-block">Lorem ipsum dolor sit.</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="feature-v1 d-flex align-items-center">
+            <div class="icon-wrap mr-3">
+              <span class="flaticon-virus"></span>
+            </div>
+            <div>
+              <h3>Gejala</h3>
+              <span class="d-block">Lorem ipsum dolor sit.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="site-section bg-primary-light">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+
+            <div class="row">
+              <div class="col-6 col-lg-6 mt-lg-5">
+                <div class="media-v1 bg-1">
+                  <div class="icon-wrap">
+                    <span class="flaticon-stay-at-home"></span>
+                  </div>
+                  <div class="body">
+                    <h3>Diam di Rumah</h3>
+                  </div>
+                </div>
+
+                <div class="media-v1 bg-1">
+                  <div class="icon-wrap">
+                    <span class="flaticon-patient"></span>
+                  </div>
+                  <div class="body">
+                    <h3>Menggunakan Masker</h3>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 col-lg-6">
+                <div class="media-v1 bg-1">
+                  <div class="icon-wrap">
+                    <span class="flaticon-social-distancing"></span>
+                  </div>
+                  <div class="body">
+                    <h3>Tetap Berjaga Jarak</h3>
+                  </div>
+                </div>
+
+                <div class="media-v1 bg-1">
+                  <div class="icon-wrap">
+                    <span class="flaticon-hand-washing"></span>
+                  </div>
+                  <div class="body">
+                    <h3>Mencuci Tangan</h3>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+          <div class="col-lg-5 ml-auto">
+            <h2 class="section-heading mb-4">Bagaimana Cara Mencegah Virus Corona?</h2>
+            <p>Beberapa cara yang bisa dilakukan untuk mencegah penularan virus ini adalah:</p>
+
+            <ul class="list-check list-unstyled mb-5">
+              <li>Menjaga kesehatan dan kebugaran agar stamina tubuh tetap prima dan sistem imunitas / kekebalan tubuh meningkat.</li>
+              <li>Mencuci tangan dengan benar secara teratur menggunakan air dan sabun atau hand-rub berbasis alkohol. Mencuci tangan sampai bersih selain dapat membunuh virus yang mungkin ada di tangan kita, tindakan ini juga merupakan salah satu tindakan yang mudah dan murah. Sekitar 98% penyebaran penyakit bersumber dari tangan. Karena itu, menjaga kebersihan tangan adalah hal yang sangat penting.</li>
+              <li>Jaga jarak setidaknya 1 meter dengan orang lain. Jika anda terlalu dekat, anda dapat menghirup droplet dari orang yang mungkin menderita COVID-19.</li>
+            </ul>
+
+            <p><a href="#" class="btn btn-primary">Baca Selengkapanya Tentang Pencegahan</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="site-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-lg-7 mx-auto text-center">
+            <span class="subheading">What you need to do</span>
+            <h2 class="mb-4 section-heading">How To Protect Yourself</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex officia quas, modi sit eligendi numquam!</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 ">
+            <div class="row mt-5 pt-5">
+              <div class="col-lg-6 do ">
+                <h3>You should do</h3>
+                <ul class="list-unstyled check">
+                  <li>Diam di Rumah</li>
+                  <li>Memakai masker</li>
+                  <li>Menggunakan hand sanitizer</li>
+                  <li>Disinfeksi rumah Anda</li>
+                  <li>Cuci tangan anda</li>
+                  <li>Sering isolasi diri</li>
+                </ul>
+              </div>
+              <div class="col-lg-6 dont ">
+                <h3>Yang harus anda hindari</h3>
+                <ul class="list-unstyled cross">
+                  <li>Hindari orang yang terinfeksi</li>
+                  <li>Hindari binatang</li>
+                  <li>Hindari berjabat tangan</li>
+                  <li>Hindari permukaan yang terinfeksi</li>
+                  <li>Jangan menyentuh muka anda</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <img src="{% static 'front/images/protect.png' %}" alt="Image" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="site-section bg-primary-light">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-lg-7 mx-auto text-center">
+            <h2 class="mb-4 section-heading">Gejala virus corona</h2>
+            <p>Berikut beberapa gejala virus corona: </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 mb-4">
+            <div class="symptom d-flex">
+              <div class="img">
+                <img src="{% static 'front/images/symptom_high-fever.png' %}" alt="Image" class="img-fluid">
+              </div>
+              <div class="text">
+                <h3>Demam Tinggi</h3>
+                <p> demam COVID-19, demam ini bisa disertai dengan gejala respirasi yang lebih dominan seperti sesak napas, batuk, susah menelan anosmia </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 mb-4">
+            <div class="symptom d-flex">
+              <div class="img">
+                <img src="{% static 'front/images/symptom_cough.png' %}" alt="Image" class="img-fluid">
+              </div>
+              <div class="text">
+                <h3>Batuk</h3>
+                <p> jika gejala batuk adalah kering, terus-menerus, dan disertai sesak napas karena virus corona menyerang jaringan 
+                  paru-paru.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 mb-4">
+            <div class="symptom d-flex">
+              <div class="img">
+                <img src="{% static 'front/images/symptom_sore-troath.png' %}" alt="Image" class="img-fluid">
+              </div>
+              <div class="text">
+                <h3>Sakit Tenggorokan</h3>
+                <p> Sakit tenggorokan karena Corona seperti apa?
+                  Sakit tenggorokan covid diikuti oleh adanya rasa gatal ketika batuk dan tubuh yang terasa sakit atau pegal.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mb-4">
+            <div class="symptom d-flex">
+              <div class="img">
+                <img src="{% static 'front/images/symptom_headache.png' %}" alt="Image" class="img-fluid">
+              </div>
+              <div class="text">
+                <h3>Sakit Kepala</h3>
+                <p> Sakit kepala yang berlangsung lebih dari tiga hari dikeluhkan pada lebih dari 10 persen pengidap virus corona.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row justify-content-md-center">
+          <div class="col-lg-10">
+            <div class="note row">
+
+              <div class="col-lg-8 mb-4 mb-lg-0"><strong>Stay at home and call your doctor:</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, eaque.</div>
+              <div class="col-lg-4 text-lg-right">
+                <a href="#" class="btn btn-primary"><span class="icon-phone mr-2 mt-3"></span>Help line</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="site-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-lg-7 mx-auto text-center">
+            <h2 class="mb-4 section-heading">Berita &amp; Artikel</h2>
+            <p>Seputar berita terbaru terkait covid yang ada di Indonesia </p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="post-entry">
+              <a href="#" class="thumb">
+                <span class="date">30 Jul, 2020</span>
+                <img src="{% static 'front/images/hero_1.jpg' %}" alt="Image" class="img-fluid">
+              </a>
+              <div class="post-meta text-center">
+                <a href="">
+                  <span class="icon-user"></span>
+                  <span>Admin</span>
+                </a>
+                <a href="#">
+                  <span class="icon-comment"></span>
+                  <span>3 Comments</span>
+                </a>
+              </div>
+              <h3><a href="#">How Coronavirus Very Contigous</a></h3>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="post-entry">
+              <a href="#" class="thumb">
+                <span class="date">30 Jul, 2020</span>
+                <img src="{% static 'front/images/hero_2.jpg' %}" alt="Image" class="img-fluid">
+              </a>
+              <div class="post-meta text-center">
+                <a href="">
+                  <span class="icon-user"></span>
+                  <span>Admin</span>
+                </a>
+                <a href="#">
+                  <span class="icon-comment"></span>
+                  <span>3 Comments</span>
+                </a>
+              </div>
+              <h3><a href="#">How Coronavirus Very Contigous</a></h3>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="post-entry">
+              <a href="#" class="thumb">
+                <span class="date">30 Jul, 2020</span>
+                <img src="{% static 'front/images/hero_1.jpg' %}" alt="Image" class="img-fluid">
+              </a>
+              <div class="post-meta text-center">
+                <a href="">
+                  <span class="icon-user"></span>
+                  <span>Admin</span>
+                </a>
+                <a href="#">
+                  <span class="icon-comment"></span>
+                  <span>3 Comments</span>
+                </a>
+              </div>
+              <h3><a href="#">How Coronavirus Very Contigous</a></h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+{% endblock content %}
